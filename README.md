@@ -1,6 +1,8 @@
-# 记忆系统
+# 记忆系统 / Memory
 
-长期记忆：记住偏好与事实，按关键词检索，只存本机。
+长期记忆：把用户偏好、事实记下来，需要时按关键词检索。存在本地 user:// 里，不上传。
+
+Long-term memory: store facts, recall by keyword, local only.
 
 Local-Harness（Godot 版）的独立插件。**不随主程序发布**，由主程序「设置 → 插件管理」从 GitHub 下载并自动部署到 `user://plugins/memory/`。
 
@@ -17,11 +19,11 @@ Local-Harness（Godot 版）的独立插件。**不随主程序发布**，由主
 
 ## 安装
 
-1. 打开 Local-Harness → 设置 → 插件管理 → 刷新列表
+1. Local-Harness → 设置 → 插件管理 → 刷新列表
 2. 找到「记忆系统」点安装
-3. 装完直接在对话里让模型调用即可（插件会出现在系统提示的工具清单里）
+3. 装完直接在对话里让模型调用（插件会出现在系统提示的工具清单里）
 
-也可以手动：把本仓库下载解压到 `%LOCALAPPDATA%\Godot\app_userdata\Local-Harness\plugins\memory\`。
+手动安装：把仓库解压到 `%LOCALAPPDATA%\Godot\app_userdata\Local-Harness\plugins\memory\`。
 
 ## 结构
 
