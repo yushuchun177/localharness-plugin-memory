@@ -1,8 +1,10 @@
 {
   "id": "memory",
   "name": "记忆系统",
+  "name_en": "Memory",
   "version": "0.1.0",
   "description": "长期记忆：把用户偏好、事实记下来，需要时按关键词检索。存在本地 user:// 里，不上传。",
+  "description_en": "Long-term memory: store facts, recall by keyword, local only.",
   "author": "yushuchun177",
   "homepage": "https://github.com/yushuchun177/localharness-plugin-memory",
   "min_app": "0.1.0",
