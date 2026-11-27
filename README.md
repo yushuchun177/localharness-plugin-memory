@@ -33,7 +33,8 @@ Long-term memory: store facts, recall by keyword, local only.
 
 ## 设置项
 
-- **最多记忆条数**（`max_items`，默认 `500`）超过后自动丢弃最早的
+- **最多记忆条数**（`max_items`，默认 `500`）
+- **让助手自己决定要不要记**（`auto`，默认 `True`）
 
 ## 权限
 
@@ -90,7 +91,8 @@ Manual: unzip this repo into `%LOCALAPPDATA%\Godot\app_userdata\Local-Harness\pl
 
 ## Settings
 
-- **最多记忆条数** (`max_items`, default `500`) 超过后自动丢弃最早的
+- **最多记忆条数** (`max_items`, default `500`) 
+- **让助手自己决定要不要记** (`auto`, default `True`) 
 
 ## Permissions
 
