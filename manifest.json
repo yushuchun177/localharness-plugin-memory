@@ -27,6 +27,18 @@
       "unit": "条"
     }
   ],
+  "commands": [
+    {
+      "name": "mem",
+      "description": "记住一句话",
+      "usage": "/mem 要记住的内容"
+    },
+    {
+      "name": "memlist",
+      "description": "看已记住的内容",
+      "usage": "/memlist [关键词]"
+    }
+  ],
   "tools": [
     {
       "name": "memory_remember",
