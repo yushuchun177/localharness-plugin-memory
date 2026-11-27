@@ -24,6 +24,14 @@ func _save(items: Array) -> void:
 		f.store_string(JSON.stringify(items, "  "))
 
 
+
+func _pref(key: String, def_value):
+	var ml := Engine.get_main_loop()
+	var prefs = ml.root.get_node_or_null("/root/PluginPrefs") if ml != null else null
+	if prefs == null:
+		return def_value
+	return prefs.get_value("memory", key, def_value)
+
 func run(tool: String, args: Dictionary) -> Dictionary:
 	match tool:
 		"memory_remember":
@@ -48,8 +56,9 @@ func _remember(args: Dictionary) -> Dictionary:
 		"tag": str(args.get("tag", "")),
 		"ts": int(Time.get_unix_time_from_system()),
 	})
-	if items.size() > 500:
-		items = items.slice(items.size() - 500, items.size())
+	var cap: int = int(_pref("max_items", 500))
+	if items.size() > cap:
+		items = items.slice(items.size() - cap, items.size())
 	_save(items)
 	return {"ok": true, "output": "记住了（共 %d 条）" % items.size()}
 
