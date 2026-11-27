@@ -8,6 +8,25 @@
   "author": "yushuchun177",
   "homepage": "https://github.com/yushuchun177/localharness-plugin-memory",
   "min_app": "0.1.0",
+  "requires": {
+    "os": "全平台",
+    "deps": [],
+    "disk": "取决于条数（1 条约 200 字节）",
+    "memory": "约 5 MB",
+    "network": false
+  },
+  "settings": [
+    {
+      "key": "max_items",
+      "label": "最多记忆条数",
+      "type": "int",
+      "default": 500,
+      "help": "超过后自动丢弃最早的",
+      "min": 10,
+      "max": 10000,
+      "unit": "条"
+    }
+  ],
   "tools": [
     {
       "name": "memory_remember",
@@ -15,7 +34,11 @@
       "params": {
         "text": "string，要记住的内容",
         "tag": "string，可选，分类标签，例如 偏好 / 事实 / 项目"
-      }
+      },
+      "level": "act",
+      "needs": [
+        "本地存储"
+      ]
     },
     {
       "name": "memory_recall",
@@ -23,23 +46,22 @@
       "params": {
         "query": "string，可选",
         "limit": "int，可选，默认 10"
-      }
+      },
+      "level": "read",
+      "needs": [
+        "本地存储"
+      ]
     },
     {
       "name": "memory_forget",
       "description": "按关键词删除匹配到的记忆。",
       "params": {
         "query": "string，关键词"
-      }
-    }
-  ],
-  "settings": [
-    {
-      "key": "max_items",
-      "label": "最多记忆条数",
-      "type": "int",
-      "default": 500,
-      "help": "超过后自动丢弃最早的"
+      },
+      "level": "act",
+      "needs": [
+        "本地存储"
+      ]
     }
   ]
 }
