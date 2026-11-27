@@ -101,3 +101,12 @@ func _forget(args: Dictionary) -> Dictionary:
 			keep.append(it)
 	_save(keep)
 	return {"ok": true, "output": "删除了 %d 条，剩 %d 条" % [removed, keep.size()]}
+
+func on_command(cmd: String, args: String) -> Dictionary:
+	if cmd == "mem":
+		if args.strip_edges() == "":
+			return {"ok": false, "output": "用法：/mem 要记住的内容"}
+		return run("memory_remember", {"text": args.strip_edges()})
+	if cmd == "memlist":
+		return run("memory_recall", {"query": args.strip_edges()})
+	return {"ok": false, "output": "未知命令"}
