@@ -32,5 +32,14 @@
         "query": "string，关键词"
       }
     }
+  ],
+  "settings": [
+    {
+      "key": "max_items",
+      "label": "最多记忆条数",
+      "type": "int",
+      "default": 500,
+      "help": "超过后自动丢弃最早的"
+    }
   ]
 }
