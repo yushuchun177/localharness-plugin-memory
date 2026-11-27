@@ -22,10 +22,15 @@
       "label": "最多记忆条数",
       "type": "int",
       "default": 500,
-      "help": "超过后自动丢弃最早的",
       "min": 10,
       "max": 10000,
       "unit": "条"
+    },
+    {
+      "key": "auto",
+      "label": "让助手自己决定要不要记",
+      "type": "bool",
+      "default": true
     }
   ],
   "commands": [
